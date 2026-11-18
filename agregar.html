@@ -10,7 +10,7 @@
 <body>
 
     <header>
-        <h1>Registro de Producto</h1>
+        <h1 id="titulo">Registro de Producto</h1>
     </header>
 
     <nav>
@@ -21,21 +21,27 @@
 
     <main>
 
-        <form>
+        <div id="mensaje" class="mensaje" hidden></div>
 
-            <label>Nombre del producto</label>
-            <input type="text" placeholder="Ingrese nombre">
+        <form id="formulario" novalidate>
 
-            <label>Categoría</label>
-            <input type="text" placeholder="Ingrese categoría">
+            <label for="nombre">Nombre del producto</label>
+            <input type="text" id="nombre" placeholder="Ingrese nombre" maxlength="60">
+            <span class="error" id="error-nombre"></span>
 
-            <label>Descripción</label>
-            <textarea rows="4"></textarea>
+            <label for="categoria">Categoría</label>
+            <input type="text" id="categoria" placeholder="Ingrese categoría" maxlength="40">
+            <span class="error" id="error-categoria"></span>
 
-            <label>Cantidad</label>
-            <input type="number" placeholder="0">
+            <label for="descripcion">Descripción</label>
+            <textarea id="descripcion" rows="4" maxlength="200"></textarea>
+            <span class="error" id="error-descripcion"></span>
 
-            <button type="submit">
+            <label for="cantidad">Cantidad</label>
+            <input type="number" id="cantidad" placeholder="0" min="0" step="1">
+            <span class="error" id="error-cantidad"></span>
+
+            <button type="submit" id="boton-guardar">
                 Guardar Producto
             </button>
 
@@ -46,6 +52,9 @@
     <footer>
         Sistema de Inventario
     </footer>
+
+    <script src="js/inventario.js"></script>
+    <script src="js/formulario.js"></script>
 
 </body>
 

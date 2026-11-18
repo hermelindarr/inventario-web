@@ -6,27 +6,32 @@
 
 body{
     font-family:Arial, Helvetica, sans-serif;
-    background:#f4f6f8;
+    background:#fdf3f6;
+    color:#4a2f3a;
 }
 
 header{
-    background:#0d6efd;
-    color:white;
+    background:#f6c3d1;
+    color:#7a2e4a;
     padding:25px;
     text-align:center;
 }
 
 nav{
-    background:#084298;
+    background:#eba3b7;
     padding:15px;
     text-align:center;
 }
 
 nav a{
-    color:white;
+    color:#5c1f38;
     text-decoration:none;
     margin:0 15px;
     font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffffff;
 }
 
 main{
@@ -40,6 +45,7 @@ main{
     padding:20px;
     margin-top:20px;
     border-radius:10px;
+    border:1px solid #f3d3dc;
 }
 
 table{
@@ -49,12 +55,12 @@ table{
 }
 
 th{
-    background:#0d6efd;
-    color:white;
+    background:#f6c3d1;
+    color:#7a2e4a;
 }
 
 th, td{
-    border:1px solid #ddd;
+    border:1px solid #f3d3dc;
     padding:12px;
     text-align:center;
 }
@@ -63,6 +69,7 @@ form{
     background:white;
     padding:25px;
     border-radius:10px;
+    border:1px solid #f3d3dc;
 }
 
 label{
@@ -75,6 +82,15 @@ input,
 textarea{
     width:100%;
     padding:10px;
+    border:1px solid #e9bccb;
+    border-radius:6px;
+    font:inherit;
+}
+
+input:focus,
+textarea:focus{
+    outline:2px solid #eba3b7;
+    border-color:#eba3b7;
 }
 
 button{
@@ -82,20 +98,98 @@ button{
     padding:12px;
     width:100%;
     border:none;
-    background:#0d6efd;
+    border-radius:6px;
+    background:#c2577a;
     color:white;
     font-size:16px;
     cursor:pointer;
 }
 
 button:hover{
-    background:#084298;
+    background:#9e3f60;
+}
+
+button:disabled{
+    opacity:0.5;
+    cursor:not-allowed;
 }
 
 footer{
     margin-top:40px;
-    background:#212529;
+    background:#7a2e4a;
     color:white;
     text-align:center;
     padding:15px;
+}
+
+/* ===== Agregados: tabla, mensajes y errores ===== */
+
+.acciones-tabla{
+    text-align:right;
+    margin-bottom:12px;
+}
+
+.boton-chico{
+    width:auto;
+    margin:0;
+    padding:7px 14px;
+    font-size:14px;
+}
+
+.boton-editar{
+    display:inline-block;
+    padding:7px 14px;
+    border-radius:6px;
+    background:#f6c3d1;
+    color:#7a2e4a;
+    font-size:14px;
+    text-decoration:none;
+}
+
+.boton-editar:hover{
+    background:#eba3b7;
+}
+
+.boton-eliminar{
+    background:white;
+    color:#b3261e;
+    border:1px solid #e8a3a3;
+    margin-left:6px;
+}
+
+.boton-eliminar:hover{
+    background:#fde8e8;
+}
+
+.mensaje{
+    padding:12px 15px;
+    border-radius:6px;
+    margin-bottom:15px;
+}
+
+.mensaje.exito{
+    background:#e5f5ea;
+    color:#22663b;
+}
+
+.mensaje.error{
+    background:#fde8e8;
+    color:#a32020;
+}
+
+.error{
+    display:block;
+    color:#a32020;
+    font-size:14px;
+    margin-top:4px;
+}
+
+input.invalido,
+textarea.invalido{
+    border-color:#a32020;
+}
+
+.vacio{
+    color:#8a6a77;
+    padding:20px;
 }
