@@ -6,30 +6,37 @@
 
 body{
     font-family:Arial, Helvetica, sans-serif;
-    background:#f4f6f8;
+    background:#fff5f8;
+    color:#4a2c3a;
 }
 
 header{
-    background:#0d6efd;
-    color:white;
+    background:#f8bbd0;
+    color:#880e4f;
     padding:25px;
     text-align:center;
 }
 
 nav{
-    background:#084298;
+    background:#f48fb1;
     padding:15px;
     text-align:center;
 }
 
 nav a{
-    color:white;
+    color:#5d0a34;
     text-decoration:none;
     margin:0 15px;
     font-weight:bold;
 }
 
+nav a:hover{
+    text-decoration:underline;
+}
+
 main{
+    position:relative;
+    z-index:1;
     max-width:900px;
     margin:auto;
     padding:30px;
@@ -40,6 +47,7 @@ main{
     padding:20px;
     margin-top:20px;
     border-radius:10px;
+    border:1px solid #f8bbd0;
 }
 
 table{
@@ -49,12 +57,12 @@ table{
 }
 
 th{
-    background:#0d6efd;
-    color:white;
+    background:#f8bbd0;
+    color:#880e4f;
 }
 
 th, td{
-    border:1px solid #ddd;
+    border:1px solid #f8d3e0;
     padding:12px;
     text-align:center;
 }
@@ -63,6 +71,7 @@ form{
     background:white;
     padding:25px;
     border-radius:10px;
+    border:1px solid #f8bbd0;
 }
 
 label{
@@ -75,6 +84,7 @@ input,
 textarea{
     width:100%;
     padding:10px;
+    border:1px solid #f0b4c8;
 }
 
 button{
@@ -82,14 +92,14 @@ button{
     padding:12px;
     width:100%;
     border:none;
-    background:#0d6efd;
+    background:#d81b60;
     color:white;
     font-size:16px;
     cursor:pointer;
 }
 
 button:hover{
-    background:#084298;
+    background:#ad1457;
 }
 
 button:disabled{
@@ -98,9 +108,11 @@ button:disabled{
 }
 
 footer{
+    position:relative;
+    z-index:1;
     margin-top:40px;
-    background:#212529;
-    color:white;
+    background:#f8bbd0;
+    color:#880e4f;
     text-align:center;
     padding:15px;
 }
@@ -120,23 +132,23 @@ footer{
 .boton-editar{
     display:inline-block;
     padding:6px 12px;
-    background:#0d6efd;
+    background:#d81b60;
     color:white;
     font-size:14px;
     text-decoration:none;
 }
 
 .boton-editar:hover{
-    background:#084298;
+    background:#ad1457;
 }
 
 .boton-eliminar{
-    background:#dc3545;
+    background:#c62828;
     margin-left:6px;
 }
 
 .boton-eliminar:hover{
-    background:#a71d2a;
+    background:#8e0000;
 }
 
 .mensaje{
@@ -156,17 +168,34 @@ footer{
 
 .error{
     display:block;
-    color:#dc3545;
+    color:#c62828;
     font-size:14px;
     margin-top:4px;
 }
 
 input.invalido,
 textarea.invalido{
-    border:1px solid #dc3545;
+    border:1px solid #c62828;
 }
 
 .vacio{
-    color:#666;
+    color:#8a6a77;
     padding:20px;
+}
+
+/* Tulipanes en la esquina inferior derecha */
+.tulipanes{
+    position:fixed;
+    right:10px;
+    bottom:0;
+    width:170px;
+    z-index:0;
+    pointer-events:none;
+}
+
+@media (max-width:1100px){
+    .tulipanes{
+        width:110px;
+        opacity:0.6;
+    }
 }
